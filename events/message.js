@@ -13,9 +13,9 @@ module.exports = {
       }
       const [command, args] = message.content.split(/ (.+)/);
       switch(command) {
-        case '!addname':                 
-          addName(message.author.id, message.author.username).then(name => {     
-            message.reply(`<@${name.dataValues.discordAccountId}>, I have added you to the Ledger as ${name.dataValues.discordName}. You can now add your guild treasury transactions!`);
+        case '!addname':
+          addName(message.author.id, message.author.username).then(name => {
+            message.reply(`<@${name.dataValues.discordAccountId}>, I have added you to the Ledger as ${name.dataValues.discordName}. You can now add your treasury transactions!`);
           }).catch (e => {
             message.reply(`<@${message.author.id}>, ${e}.`);
           });
@@ -82,5 +82,5 @@ module.exports = {
         default:
           return;
       }
-  } 
+  }
 }

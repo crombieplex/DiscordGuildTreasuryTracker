@@ -15,7 +15,7 @@ const logSpending = async (value, discordAccountId, reason) => {
         if (e.name === 'SequelizeForeignKeyConstraintError') {
             throw('your name hasn\'t been added to the Ledger yet, please add with "!addname"');
         } else {
-            throw('something unexpected has happened, please alert bot owner if it happens again');
+            throw('something unexpected has happened, please alert Crombie if it happens again');
         }
     }
 };

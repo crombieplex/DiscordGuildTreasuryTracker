@@ -5,7 +5,7 @@ const { getCurrentWeek } = require('./../../conversions');
 const checkWeek = async () => {
     try {
         let names = await Names.findAll({
-            attributes: [ 'discordAccountId' ] 
+            attributes: [ 'discordAccountId' ]
         });
         let week = await Ledger.findAll({
             attributes: [ 'discordAccountId' ],
@@ -23,8 +23,8 @@ const checkWeek = async () => {
         return names.filter(name => {
             return week.indexOf(name) < 0;
         });
-    } catch (e) {    
-        throw('something unexpected has happened, please alert bot owner if it happens again');
+    } catch (e) {
+        throw('something unexpected has happened, please alert Crombie if it happens again');
     }
 };
 

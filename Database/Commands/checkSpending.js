@@ -13,9 +13,9 @@ const checkSpending = async () => {
         return week.map(week => {
             return week.dataValues;
         });
-        
-    } catch (e) {    
-        throw('something unexpected has happened, please alert bot owner if it happens again');
+
+    } catch (e) {
+        throw('something unexpected has happened, please alert Crombie if it happens again');
     }
 };
 

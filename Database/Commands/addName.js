@@ -11,7 +11,7 @@ const addName = async (discordAccountId, discordName) => {
         if (e.name === 'SequelizeUniqueConstraintError') {
             throw('that name has already been added to the Ledger');
         } else {
-            throw('something unexpected has happened, please alert bot owner if it happens again');
+            throw('something unexpected has happened, please alert Crombie if it happens again');
         }
     }
 };
