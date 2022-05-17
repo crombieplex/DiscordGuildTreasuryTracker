@@ -7,9 +7,9 @@ module.exports = {
 	once: true,
 	execute(client) {
         //remove force:true before releasing, it resets the DB every launch
-        Ledger.sync({force: true});
-        Names.sync({force: true});
-        Spending.sync({force: true});
+        Ledger.sync({force: false});
+        Names.sync({force: false});
+        Spending.sync({force: false});
         console.log(`Ready! Logged in as ${client.user.tag}`);
 	},
 };
